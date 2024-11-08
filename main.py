@@ -16,12 +16,16 @@ def umap_plot_func(umap_data, colorby):
 
 @st.cache_data
 def load_data(rds):
+    print(0)
     rds2 = rds.getvalue()
     with open("rds_file.rds", 'wb') as w:
         w.write(rds2)
-        
+
+    print(1)
     process = subprocess.Popen(["Rscript", "./organiod_integrin_expression.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    print(2)
     result = process.communicate()
+    print(result)
 
 def main():
     print("hi")
