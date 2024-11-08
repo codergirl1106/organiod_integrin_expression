@@ -12,7 +12,7 @@ def my_cache(f):
 
 @st.cache_data
 def umap_plot_func(umap_data, colorby):
-    return px.scatter(umap_data, x="umap_1", y="umap_2", color=colorby)
+    return px.scatter(umap_data, x="UMAP_1", y="UMAP_2", color=colorby)
 
 @st.cache_data
 def load_data(rds):
