@@ -32,7 +32,7 @@ def main():
 
         integrin_expression_data = pd.read_csv("./integrin_expression.csv", index_col=0)
 
-        print(head(umap_data))
+        print(umap_data.head())
         
         colorby_options = list(umap_data.columns)
         colorby_options.remove('umap_1')
