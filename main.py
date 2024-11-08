@@ -23,13 +23,14 @@ def load_data(rds):
     process = subprocess.Popen(["Rscript", "./organiod_integrin_expression.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     result = process.communicate()
 
-def main():    
+def main():
+    print("hi")
     rds = st.file_uploader("upload an .rds file")
 
     if rds != None:
-
+        print("hi2")
         load_data(rds)
-
+        print("hi3")
         umap_data = pd.read_csv("./umap_data.csv", index_col=0)
 
         integrin_expression_data = pd.read_csv("./integrin_expression.csv", index_col=0)
