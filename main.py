@@ -37,8 +37,8 @@ def main():
         print(umap_data.columns)
         
         colorby_options = list(umap_data.columns)
-        colorby_options.remove('umap_1')
-        colorby_options.remove('umap_2')
+        colorby_options.remove('UMAP_1')
+        colorby_options.remove('UMAP_2')
         colorby_options.remove('cell_type')
         colorby_options = ['cell_type']+colorby_options
         
